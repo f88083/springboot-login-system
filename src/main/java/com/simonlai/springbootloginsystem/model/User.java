@@ -33,6 +33,7 @@ public class User {
     @Size(max = 120)
     private String password;
 
+    // Create many-to-many middle table
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
